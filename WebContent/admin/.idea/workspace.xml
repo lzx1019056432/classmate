@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65713279-7e17-45a0-bdc7-3c70d99fc024" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="tec-classroom-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tec-classroom-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classroom-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classroom-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="752">
+              <caret line="390" column="1" lean-forward="true" selection-start-line="359" selection-end-line="390" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#nav#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#8;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#td#8;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#8;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tec-course-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tec-course-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="378" column="1" lean-forward="true" selection-start-line="372" selection-end-line="378" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#td#8;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course-list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/course-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-739">
+              <caret line="214" column="81" selection-start-line="214" selection-start-column="81" selection-end-line="214" selection-end-column="81" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tec-feedback-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tec-feedback-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#u#0;n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classroom-all.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classroom-all.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="209" column="57" lean-forward="true" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#u#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#u#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tec-feedback-old-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tec-feedback-old-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1364">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-role.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-role.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1083">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/static/h-ui.admin/css/H-ui.login.css" />
+        <option value="$PROJECT_DIR$/admin-add.html" />
+        <option value="$PROJECT_DIR$/changecourse-add.html" />
+        <option value="$PROJECT_DIR$/admin-role-add.html" />
+        <option value="$PROJECT_DIR$/classroom-add.html" />
+        <option value="$PROJECT_DIR$/course-add.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/feedback-list.html" />
+        <option value="$PROJECT_DIR$/feedback-old-list.html" />
+        <option value="$PROJECT_DIR$/tec-classroom-all.html" />
+        <option value="$PROJECT_DIR$/tec-classroom-list.html" />
+        <option value="$PROJECT_DIR$/tec-course-list.html" />
+        <option value="$PROJECT_DIR$/tec-feedback-list.html" />
+        <option value="$PROJECT_DIR$/tec-feedback-old-list.html" />
+        <option value="$PROJECT_DIR$/admin-list.html" />
+        <option value="$PROJECT_DIR$/admin-role.html" />
+        <option value="$PROJECT_DIR$/classroom-all.html" />
+        <option value="$PROJECT_DIR$/classroom-list.html" />
+        <option value="$PROJECT_DIR$/course-list.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1133" />
+    <option name="y" value="43" />
+    <option name="width" value="1034" />
+    <option name="height" value="775" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Teacher.admin.page2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Teacher.admin.page2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\大学课程学习\大四下学期\毕业设计类\Teacher.admin.page2" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65713279-7e17-45a0-bdc7-3c70d99fc024" name="Default" comment="" />
+      <created>1554474550725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554474550725</updated>
+      <workItem from="1554474554844" duration="3131000" />
+      <workItem from="1554481194903" duration="1757000" />
+      <workItem from="1554542175827" duration="2133000" />
+      <workItem from="1554643028744" duration="580000" />
+      <workItem from="1554687134648" duration="22055000" />
+      <workItem from="1554774509626" duration="7875000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="37531000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.117492095" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.117492095" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3124">
+          <caret line="142" column="17" lean-forward="true" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1892">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2442">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-role-add.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changecourse-add.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-apply.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="110" column="54" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1892">
+          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="66" selection-start-line="66" selection-end-line="109" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2442">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-role-add.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changecourse-add.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-apply.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="55" column="94" lean-forward="true" selection-start-line="55" selection-start-column="94" selection-end-line="55" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/h-ui.admin/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/h-ui.admin/css/H-ui.login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/h-ui.admin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/h-ui.admin/css/H-ui.admin.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-course-add.html" />
+    <entry file="file://$PROJECT_DIR$/tec-classroom-add.html" />
+    <entry file="file://$PROJECT_DIR$/admin-role-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="80" column="84" selection-start-line="80" selection-start-column="84" selection-end-line="80" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changecourse-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-apply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="90" column="28" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="131" column="84" selection-start-line="131" selection-start-column="84" selection-end-line="131" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="104" column="83" selection-start-line="104" selection-start-column="83" selection-end-line="104" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-changecourse-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2358" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="112" column="149" selection-start-line="112" selection-start-column="149" selection-end-line="112" selection-end-column="149" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback-old-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="112" column="149" selection-start-line="112" selection-start-column="149" selection-end-line="112" selection-end-column="149" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-classroom-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#u#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#7;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-classroom-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-feedback-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#u#0;n#div#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-feedback-old-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1364">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1083">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="209" column="57" lean-forward="true" selection-start-line="209" selection-start-column="57" selection-end-line="209" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#u#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#u#0;n#td#2;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tec-course-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="378" column="1" lean-forward="true" selection-start-line="372" selection-end-line="378" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#3;n#tbody#0;n#table#0;n#div#1;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classroom-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="390" column="1" lean-forward="true" selection-start-line="359" selection-end-line="390" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#nav#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#8;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#8;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#8;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#article#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/h-ui/css/H-ui.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="11" column="119675" selection-start-line="11" selection-start-column="119675" selection-end-line="11" selection-end-column="119675" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-739">
+          <caret line="214" column="81" selection-start-line="214" selection-start-column="81" selection-end-line="214" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

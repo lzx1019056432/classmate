@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.dao">
+
+<!-- 1.登录功能-->
+	<select id="Login" resultType="cla"> 
+	select * from userlogin where username=#{0} and password=#{1};
+	</select>	
+<!--2.添加教室  -->
+<insert id="InsertClassroom">
+insert into Classroom (Classid,Class_name,Class_loc,Class_number,Class_remark) values(default,#{0},#{1},#{2},#{3});
+</insert>
+<!-- 3.删除教室 -->
+<delete id="delClass" parameterType="Integer">
+    delete from Classroom where Classid=#{0}
+</delete>
+ <!-- 4.信息的查看 -->
+<select id="rewritemess" resultType="mess">
+select * from message where mesid = #{0};
+</select>
+ <!-- 5.教室申请审核 -->
+<update id="reclassstatus" parameterType="int">
+update clacur set cc_status=#{1} where ccid=#{0}
+</update>
+<!-- 6.向申请者发送消息 -->
+<insert id="Sendmess">
+insert into message (mesid,uid,mess_content,mess_status) values(default,#{0},#{1},#{2});
+</insert>
+ <!-- 7.进行排课 -->
+<insert id="Selectclass">
+insert into clacur (ccid,Classid,uid,Coursename,ccteacher,cc_time1,cc_time2,cc_tatus,ccuse) values(default,#{0},#{1},#{2},#{3},#{4},#{5},#{6},#{7},#{8});
+</insert>
+ <!-- 8.检测是否有新消息 -->
+ <select id="Selmess" resultType="mess">
+select * from message where uid=#{0}
+</select>
+ <!-- 9.教师被分配课程 --> 
+  <select id="Selclasstea" resultType="cla">
+select * from clacur where uid=#{0}
+</select>
+<!-- 10.教师申请调课 --> 
+ <insert id="rechangecur">
+ 
+</insert>
+<!-- 11.添加教师信息 --> 
+<insert id="Selectclass">
+insert into userlogin (uid,username,password,name,uid_rol) values(default,#{0},#{1},#{2},#{3});
+</insert>
+ 
+</mapper>
