@@ -75,8 +75,8 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 教室管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="classroom-all.html" title="教室总览">教室总览</a></li>
-					<li><a href="classroom-list.html" title="教室管理">教室列表</a></li>
+					<li><a href="classroom-all.jsp" title="教室总览">教室总览</a></li>
+					<li><a href="classroom-list.jsp" title="教室管理">教室列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -84,7 +84,7 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 课程管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="course-list.html" title="课程管理">课程管理</a></li>
+					<li><a href="course-list.jsp" title="课程管理">课程管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -92,7 +92,7 @@
 			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="admin-role.html" title="角色管理">角色管理</a></li>
+					<li><a href="admin-role.jsp" title="角色管理">角色管理</a></li>
 					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
 				</ul>
 			</dd>
@@ -102,8 +102,8 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="feedback-list.html" title="未读消息">未读消息</a></li>
-					<li><a href="feedback-old-list.html" title="已读消息">已读消息</a></li>
+					<li><a href="feedback-list.jsp" title="未读消息">未读消息</a></li>
+					<li><a href="feedback-old-list.jsp" title="已读消息">已读消息</a></li>
 				</ul>
 			</dd>
 		</dl>
