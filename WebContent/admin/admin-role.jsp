@@ -92,8 +92,7 @@ pageEncoding="UTF-8"%>
 			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="admin-role.jsp" title="角色管理">角色管理</a></li>
-					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
+					<li><a href="teacherlist.do" title="管理员列表">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>

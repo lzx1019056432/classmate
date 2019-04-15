@@ -22,7 +22,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 		<property name="configLocation" value="classpath:mybatis-cfg.xml"/>  		
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">   
-	<property name="basePackage" value="com.hp.dao"/>   
+	<property name="basePackage" value="com.xxx.dao"/>   
 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
  	</bean>
  	 

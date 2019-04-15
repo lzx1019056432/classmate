@@ -1,4 +1,7 @@
-﻿<!--_meta 作为公共模版分离出去-->
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,11 +16,11 @@
 <script type="text/javascript" src="lib/html5.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
@@ -47,7 +50,7 @@
 							<li><a href="#">退出</a></li>
 				</ul>
 			</li>
-					<li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">1</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+					<li id="Hui-msg"> <a href="#" title="消息"><span class="badge badge-danger">${sessionScope.messlaert}</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
 					<li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a></li>
@@ -67,46 +70,45 @@
 
 <!--_menu 作为公共模版分离出去-->
 <aside class="Hui-aside">
-	
+
 	<div class="menu_dropdown bk_2">
 		<dl id="menu-article">
-			<dt><i class="Hui-iconfont">&#xe616;</i> 教室管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
+			<dt class="selected"><i class="Hui-iconfont">&#xe616;</i> 教室管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd style="display:block;">
 				<ul>
-					<li><a href="classroom-all.jsp" title="教室总览">教室总览</a></li>
-					<li><a href="classroom-list.jsp" title="教室管理">教室列表</a></li>
-		</ul>
-	</dd>
-</dl>
+					<li class="current"><a href="classlist.do" title="教室总览">教室总览</a></li>
+					<li><a href="showarrange.do" title="教室管理">教室列表</a></li>
+				</ul>
+			</dd>
+		</dl>
 		<dl id="menu-course">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 课程管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="course-list.jsp" title="课程管理">课程管理</a></li>
-		</ul>
-	</dd>
-</dl>
+					<li><a href="courselist.do" title="课程管理">课程管理</a></li>
+				</ul>
+			</dd>
+		</dl>
 		<dl id="menu-admin">
 			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="admin-role.jsp" title="角色管理">角色管理</a></li>
-					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
-		</ul>
-	</dd>
-</dl>
+					<li><a href="teacherlist.do" title="管理员列表">管理员列表</a></li>
+				</ul>
+			</dd>
+		</dl>
 
-<dl id="menu-comments">
+		<dl id="menu-comments">
 			<dt><i class="Hui-iconfont">&#xe622;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="feedback-list.jsp" title="未读消息">未读消息</a></li>
-					<li><a href="feedback-old-list.jsp" title="已读消息">已读消息</a></li>
-		</ul>
-	</dd>
-</dl>
+					<li><a href="showmess.do" title="未读消息">未读消息</a></li>
+					<li><a href="showmessed.do" title="已读消息">已读消息</a></li>
+				</ul>
+			</dd>
+		</dl>
 
-</div>
+	</div>
 </aside>
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
 <!--/_menu 作为公共模版分离出去-->
@@ -122,13 +124,12 @@
 	<div class="Hui-article">
 		<article class="cl pd-20">
 			<div class="text-c">
-				
+				<form action="searchroom.do" method="post">
 				<span class="select-box inline">
-				<select name="" class="select">
-					<option value="0">选择教学楼</option>
-					<option value="1">第一公教</option>
-					<option value="2">第二公教</option>
-					<option value="3">软件园</option>
+				<select name="class_loc" class="select" id="selectloc">
+					<option value="第一公教">第一公教</option>
+					<option value="第二公教">第二公教</option>
+					<option value="软件园">软件园</option>
 				</select>
 				</span>
 				<!--<span class="select-box inline">-->
@@ -140,15 +141,16 @@
 				<!--</select>-->
 				<!--</span>-->
 				
-				<input type="text" name="" id="" placeholder=" 教室号" style="width:250px" class="input-text">
-				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+				<input type="text" name="class_name" id="class_name" placeholder=" 教室号" style="width:250px" class="input-text">
+				<button name="" id="search" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+			</form>
 			</div>
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
 				<span class="l">
 				<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
-				<a class="btn btn-primary radius" data-title="添加教室" _href="classroom-add.html" onclick="article_add('添加教室','classroom-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加教室</a>
+				<a class="btn btn-primary radius" data-title="添加教室" _href="classroom-add.html" onclick="article_add('添加教室','admin/classroom-add.jsp')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加教室</a>
 				</span>
-				<span class="r">共有数据：<strong>4</strong> 条</span>
+				<span class="r">共有数据：<strong>${requestScope.number}</strong> 条</span>
 			</div>
 			<div class="mt-20">
 				<table class="table table-border table-bordered table-bg table-hover table-sort">
@@ -166,57 +168,24 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:set var="index" value="0" scope="page"/>
+					<c:forEach items="${list}" var="lit">
+					<c:set var="index" value="${index+1}" />
 						<tr class="text-c">
 							<td><input type="checkbox" value="" name=""></td>
-							<td>10001</td>
-							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">第一公教</u></td>
-							<td>A101</td>
-							<td>100人</td>
+							<td>${index}</td>
+							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">${lit.class_loc}</u></td>
+							<td>${lit.class_name}</td>
+							<td>${lit.class_number}人</td>
 							<!--<td>周老师</td>-->
-							<td>无</td>
+							<td>${lit.class_remark}</td>
 							<!--<td class="td-status"><span class="label label-success radius">有课</span></td>-->
 							<td class="f-14 td-manage"><!--<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>-->
 								<a style="text-decoration:none" class="ml-5" onClick="classroom_edit('编辑','classroom-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-								<a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+								<a style="text-decoration:none" class="ml-5" onClick="classroom_del(this,${lit.classid})" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 						</tr>
-						<tr class="text-c">
-							<td><input type="checkbox" value="" name=""></td>
-							<td>10002</td>
-							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">第一公教</u></td>
-							<td>A102</td>
-							<td>100人</td>
-							<td>无</td>
-							<!--<td class="td-status"><span class="label label-success radius">有课</span></td>-->
-							<td class="f-14 td-manage"><!--<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>-->
-								<a style="text-decoration:none" class="ml-5" onClick="classroom_edit('编辑','classroom-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-								<a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input type="checkbox" value="" name=""></td>
-							<td>10003</td>
-							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">第一公教</u></td>
-							<td>A103</td>
-							<td>100人</td>
-							<td>无</td>
-							<!--<td class="td-status"><span class="label label-success radius">有课</span></td>-->
-							<td class="f-14 td-manage"><!--<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>-->
-								<a style="text-decoration:none" class="ml-5" onClick="classroom_edit('编辑','classroom-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-								<a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-
-						<tr class="text-c">
-							<td><input type="checkbox" value="" name=""></td>
-							<td>10004</td>
-							<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">第一公教</u></td>
-							<td>A104</td>
-							<td>100人</td>
-							<!--<td>周老师</td>-->
-							<td>无</td>
-							<!--<td class="td-status"><span class="label label-success radius">有课</span></td>-->
-							<td class="f-14 td-manage"><!--<a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>-->
-								<a style="text-decoration:none" class="ml-5" onClick="classroom_edit('编辑','classroom-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-								<a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
+						</c:forEach>
+						 
 					</tbody>
 				</table>
 			</div>
@@ -225,16 +194,16 @@
 </section>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
+<script type="text/javascript" src="admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
 <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="admin/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 $('.table-sort').dataTable({
 	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
@@ -248,7 +217,7 @@ $('.table-sort').dataTable({
 /*资讯-添加*/
 function article_add(title,url,w,h){
 //	var index = layer.open({
-//		type: 2,
+//		type: 2, 
 //		title: title,
 //		content: url
 //	});
@@ -265,11 +234,19 @@ function classroom_edit(title,url,id,w,h){
 	layer.full(index);
 }
 /*资讯-删除*/
-function article_del(obj,id){
+function classroom_del(obj,id){
 	layer.confirm('确认要删除吗？',function(index){
-		$.ajax({
+	  	$.post("delclassroom.do",
+	  			{classid:id
+	  			},
+	  			function(result){
+					$(obj).parents("tr").remove();
+					layer.msg('已删除!',{icon:1,time:1000});
+	  				   
+	  		});  
+/* 		$.ajax({
 			type: 'POST',
-			url: '',
+			url: '../delclassroom.do',
 			dataType: 'json',
 			success: function(data){
 				$(obj).parents("tr").remove();
@@ -278,7 +255,7 @@ function article_del(obj,id){
 			error:function(data) {
 				console.log(data.msg);
 			},
-		});		
+		});	 */	
 	});
 }
 

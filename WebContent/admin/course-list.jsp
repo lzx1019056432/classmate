@@ -1,4 +1,7 @@
-﻿<!--_meta 作为公共模版分离出去-->
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,11 +16,11 @@
 <script type="text/javascript" src="lib/html5.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
@@ -68,19 +71,19 @@
 
 	<div class="menu_dropdown bk_2">
 		<dl id="menu-article">
-			<dt><i class="Hui-iconfont">&#xe616;</i> 教室管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt class="selected"><i class="Hui-iconfont">&#xe616;</i> 教室管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="classroom-all.jsp" title="教室总览">教室总览</a></li>
-					<li><a href="classroom-list.jsp" title="教室管理">教室列表</a></li>
+					<li><a href="classlist.do" title="教室总览">教室总览</a></li>
+					<li><a href="showarrange.do" title="教室管理">教室列表</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-course">
 			<dt><i class="Hui-iconfont">&#xe613;</i> 课程管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
+			<dd style="display:block;">
 				<ul>
-					<li><a href="course-list.jsp" title="课程管理">课程管理</a></li>
+					<li class="current"><a href="courselist.do" title="课程管理">课程管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -88,8 +91,7 @@
 			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="admin-role.jsp" title="角色管理">角色管理</a></li>
-					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
+					<li><a href="teacherlist.do" title="管理员列表">管理员列表</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -98,8 +100,8 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="feedback-list.jsp" title="未读消息">未读消息</a></li>
-					<li><a href="feedback-old-list.jsp" title="已读消息">已读消息</a></li>
+					<li><a href="showmess.do" title="未读消息">未读消息</a></li>
+					<li><a href="showmessed.do" title="已读消息">已读消息</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -113,18 +115,6 @@
 	<div class="Hui-article">
 		<article class="cl pd-20">
 			<div class="text-c"> 
-				<span class="select-box inline">
-				<select name="" class="select">
-					<option value="0">选择学期</option>
-					<option value="1">2015-2016学年秋</option>
-					<option value="2">2016-2017学年春</option>
-					<option value="3">2016-2017学年秋</option>
-					<option value="4">2017-2018学年春</option>
-					<option value="5">2017-2018学年秋</option>
-					<option value="6">2018-2019学年春</option>
-					<option value="7">2018-2019学年秋</option>
-				</select>
-				</span>
 			    <span class="select-box inline">
 				<select name="" class="select">
 					<option value="0">选择院系</option>
@@ -145,16 +135,16 @@
 					<input type="text" name="" id="" placeholder=" 教师" style="width:80px" class="input-text">
 				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
 			</div>
-			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加课程','course-add.html','','510')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加课程</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加课程','classroom-add.jsp','','510')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加课程</a></span> <span class="r">共有数据：<strong>${requestScope.shownumber}</strong> 条</span> </div>
 			<div class="mt-20">
 				<table class="table table-border table-bordered table-bg table-hover table-sort">
 					<thead>
 						<tr class="text-c">
 							<th width="40"><input name="" type="checkbox" value=""></th>
-							<th width="80">上课时间</th>
-							<th width="100">院系/专业</th>
-							<th width="150">课程名</th>
-							<th width="200">课程号</th>
+							<th width="80">序号</th>
+							<th width="100">上课时间</th>
+							<th width="150">院系/专业</th>
+							<th width="200">课程名</th>
 							<th width="80">教师</th>
 							<th width="80">教室</th>
 							<th width="60">当前状态</th>
@@ -162,92 +152,44 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:set var="index1" value="0" scope="page"/>
+					<c:forEach items="${list}" var="lit">
+					<c:set var="index1" value="${index1+1}" />
 						<tr class="text-c">
 							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.5.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
+							<td>${index1}</td>
+							<td>${lit.cc_time1}^
+							<c:if test="${lit.cc_time2==0}">
+							第一大节
+							</c:if>
+							<c:if test="${lit.cc_time2==1}">
+							第二大节
+							</c:if>
+							<c:if test="${lit.cc_time2==2}">
+							第三大节
+							</c:if>
+							<c:if test="${lit.cc_time2==3}">
+							第四大节
+							</c:if>
+							</td>
+							<td>${lit.class_loc}</td>
+							<td>${lit.coursename}</td>
+							<td>${lit.ccteacher}</td>
+							<td>${lit.class_name}</td>
+							<c:if test="${lit.cc_status==0 }">
 							<td class="td-status"><span class="label label-success radius">已发布</span></td>
 							<td class="td-manage">
 							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.6.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage">
-							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.7.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage">
-							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.8.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-danger radius">未发布</span></td>
+							</c:if>
+							<c:if test="${lit.cc_status==1 }">
+							<td class="td-status"><span class="label label-danger radius">已发布</span></td>
 							<td class="td-manage">	
 							<a style="text-decoration:none" onClick="course_shenhe(this,'10001')" href="javascript:;" title="待审核">待审核</i></a>
 							<!--<a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.html','10001')" href="javascript:;" title="申请调课"> <i class="Hui-iconfont">&#xe6df;</i></a>--> 
 							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+							</c:if>
 						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.9.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage">
-							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.10.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage">
-							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
-						<tr class="text-c">
-							<td><input name="" type="checkbox" value=""></td>
-							<td>2019.1.11.上午第一大节</td>
-							<td>计算机学院/软件专业</td>
-							<td>软件工程</td>
-							<td>201500101</td>
-							<td>孙老师</td>
-							<td>C101</td>
-							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage">
-							<a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-						</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>
@@ -256,16 +198,16 @@
 </section>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
+<script type="text/javascript" src="admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
 <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="admin/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 $('.table-sort').dataTable({
 	"aaSorting": [[ 1, "desc" ]],//默认第几个排序

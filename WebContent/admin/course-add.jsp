@@ -1,4 +1,7 @@
-<!--_meta 作为公共模版分离出去-->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!--_meta 浣滀负鍏叡妯＄増鍒嗙鍑哄幓-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,69 +25,69 @@
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
-<!--/meta 作为公共模版分离出去-->
+<!--/meta 浣滀负鍏叡妯＄増鍒嗙鍑哄幓-->
 
-<title>新增课程</title>
+<title>课程添加</title>
 <link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="page-container">
 	<form class="form form-horizontal" id="form-article-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">使用日期：</label>
+			<label class="form-label col-xs-4 col-sm-2">浣跨敤鏃ユ湡锛�</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<!--<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd ',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate">-->
 				<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd '})" id="datemin" class="input-text Wdate">
 			</div>
 		</div>
 		<!--<div class="row cl">-->
-		<!--<label class="form-label col-xs-4 col-sm-2">评论结束日期：</label>-->
+		<!--<label class="form-label col-xs-4 col-sm-2">璇勮缁撴潫鏃ユ湡锛�</label>-->
 		<!--<div class="formControls col-xs-8 col-sm-9">-->
 		<!--<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">-->
 		<!--</div>-->
 		<!--</div>-->
 
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上课时间：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>涓婅鏃堕棿锛�</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="" class="select">
-					<option value="0">第一节-第二节</option>
-					<option value="1">第三节-第四节</option>
-					<option value="2">第五节-第六节</option>
-					<option value="3">第七节-第八节</option>
-					<option value="4">第九节-第十节</option>
+					<option value="0">绗竴鑺�-绗簩鑺�</option>
+					<option value="1">绗笁鑺�-绗洓鑺�</option>
+					<option value="2">绗簲鑺�-绗叚鑺�</option>
+					<option value="3">绗竷鑺�-绗叓鑺�</option>
+					<option value="4">绗節鑺�-绗崄鑺�</option>
 				</select>
 				</span> </div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>院系专业：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>闄㈢郴涓撲笟锛�</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="" class="select">
-					<option value="0">计算机科学与技术学院</option>
-					<option value="1">理学院</option>
-					<option value="2">机械学院</option>
+					<option value="0">璁＄畻鏈虹瀛︿笌鎶�鏈闄�</option>
+					<option value="1">鐞嗗闄�</option>
+					<option value="2">鏈烘瀛﹂櫌</option>
 				</select>
 				</span> </div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>课程名：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>璇剧▼鍚嶏細</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="" class="select">
-					<option value="0">计算机基础</option>
-					<option value="1">高数</option>
-					<option value="2">英语</option>
+					<option value="0">璁＄畻鏈哄熀纭�</option>
+					<option value="1">楂樻暟</option>
+					<option value="2">鑻辫</option>
 				</select>
 				</span> </div>
 		</div>
 
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>课程号：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>璇剧▼鍙凤細</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="" name="">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>教师名称：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>鏁欏笀鍚嶇О锛�</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="" name="">
 			</div>
@@ -92,7 +95,7 @@
 
 
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>教室号：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>鏁欏鍙凤細</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="" class="select">
 					<option value="0">A101</option>
@@ -104,16 +107,16 @@
 	
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-				<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
-				<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 淇濆瓨骞舵彁浜ゅ鏍�</button>
+				<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 淇濆瓨鑽夌</button>
+				<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;鍙栨秷&nbsp;&nbsp;</button>
 			</div>
 		</div>
 	</form>
 </div>
 </div>
 
-<!--_footer 作为公共模版分离出去-->
+<!--_footer 浣滀负鍏叡妯＄増鍒嗙鍑哄幓-->
 <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="lib/layer/2.4/layer.js"></script> 
  
@@ -126,9 +129,9 @@
  
 </script> 
 
-<!--/_footer /作为公共模版分离出去-->
+<!--/_footer /浣滀负鍏叡妯＄増鍒嗙鍑哄幓-->
 
-<!--请在下方写此页面业务相关的脚本-->
+<!--璇峰湪涓嬫柟鍐欐椤甸潰涓氬姟鐩稿叧鐨勮剼鏈�-->
 <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
 <script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script> 
 <script type="text/javascript">

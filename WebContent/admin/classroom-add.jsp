@@ -21,6 +21,8 @@ pageEncoding="UTF-8"%>
 <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
 <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>	 
+	<script type="text/javascript" src="js/layer/2.4/layer.js"></script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -49,52 +51,37 @@ pageEncoding="UTF-8"%>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>教学楼：</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select">
-					<option value="0">第一公教</option>
-					<option value="1">第二公教</option>
-					<option value="2">软件园</option>
+				<select id="selectroom" name="selectroom" class="select">
+					<option value="第一公教">第一公教</option>
+					<option value="第二公教">第二公教</option>
+					<option value="软件园">软件园</option>
 				</select>
 				</span> </div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>教室号：</label>
-			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select">
-					<option value="0">A101</option>
-					<option value="1">A102</option>
-					<option value="2">A103</option>
-				</select>
-				</span> </div>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="A101" id="class_name" name="class_name">
+			</div>
 		</div>
 
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>容量：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="" placeholder="60" id="class_number" name="class_number">
 			</div>
 		</div>
 	    <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>备注：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="" placeholder="备注" id="class_remark" name="class_remark">
 			</div>
-		</div>
-	
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>状态：</label>
-			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select">
-					<option value="0">有课</option>
-					<option value="1">未启用</option>
-					<option value="2">已预约</option>
-				</select>
-				</span> </div>
 		</div>
 		
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-				<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+				<button type="button" id="submitclassmess" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+				<button   class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
 				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
 			</div>
 		</div>
@@ -102,8 +89,6 @@ pageEncoding="UTF-8"%>
 </article>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="static/h-ui/js/H-ui.js"></script> 
 <script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script> 
 <!--/_footer /作为公共模版分离出去-->
@@ -119,6 +104,23 @@ pageEncoding="UTF-8"%>
 <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
 <script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
+$(document).ready(function(){
+	$("#submitclassmess").click(function(){
+		//alert($("#selectroom option:selected").text());
+		//jquery 获得select的值，通过传值
+  	$.post("../Addclass.do",
+	{class_name:$("#class_name").val(),
+	 class_loc:$("#selectroom option:selected").text(),
+	 class_number:$("#class_number").val(),
+	 class_remark:$("#class_remark").val()
+	},
+	function(result){
+		 layer.msg('添加成功，点击右上角关闭按钮',{time:8000});//这里出现了些问题，已解决
+		   
+});   
+	}); 
+	
+});
 
 </script>
 <!--/请在上方写此页面业务相关的脚本-->

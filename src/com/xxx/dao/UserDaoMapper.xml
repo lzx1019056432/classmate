@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xxx.dao">
+<mapper namespace="com.xxx.dao.Userdao">
 
 <!-- 1.登录功能-->
-	<select id="Login" resultType="cla"> 
+	<select id="Login" resultType="user"> 
 	select * from userlogin where username=#{0} and password=#{1};
 	</select>	
 <!--2.添加教室  -->
 <insert id="InsertClassroom">
-insert into Classroom (Classid,Class_name,Class_loc,Class_number,Class_remark) values(default,#{0},#{1},#{2},#{3});
+insert into classroom (classid,class_name,class_loc,class_number,class_remark) values(default,#{0},#{1},#{2},#{3});
 </insert>
 <!-- 3.删除教室 -->
 <delete id="delClass" parameterType="Integer">
-    delete from Classroom where Classid=#{0}
+    delete from classroom where classid=#{0}
 </delete>
  <!-- 4.信息的查看 -->
 <select id="rewritemess" resultType="mess">
@@ -32,11 +32,11 @@ insert into message (mesid,uid,mess_content,mess_status) values(default,#{0},#{1
 insert into clacur (ccid,Classid,uid,Coursename,ccteacher,cc_time1,cc_time2,cc_tatus,ccuse) values(default,#{0},#{1},#{2},#{3},#{4},#{5},#{6},#{7},#{8});
 </insert>
  <!-- 8.检测是否有新消息 -->
- <select id="Selmess" resultType="mess">
-select * from message where uid=#{0}
+ <select id="Selmess" resultType="int">
+select * from message where uid=#{0} and mess_status=#{1}
 </select>
  <!-- 9.教师被分配课程 --> 
-  <select id="Selclasstea" resultType="cla">
+ <select id="Selclasstea" resultType="cla">
 select * from clacur where uid=#{0}
 </select>
 <!-- 10.教师申请调课 --> 
@@ -44,8 +44,87 @@ select * from clacur where uid=#{0}
  
 </insert>
 <!-- 11.添加教师信息 --> 
-<insert id="Selectclass">
+<insert id="InsertTeacher">
 insert into userlogin (uid,username,password,name,uid_rol) values(default,#{0},#{1},#{2},#{3});
 </insert>
- 
+<!-- 12.管理员-教师-教室资源查看 --> 
+<select id="listroom" resultType="cr">
+select * from classroom
+</select>
+<!-- 13.共有多少教室 --> 
+<select id="Classroomnumber" resultType="int">
+select count(*) from classroom
+</select>
+<!-- 14.根据教室号和地点查询教室 --> 
+<select id="searchroom" resultType="cr">
+select * from classroom where class_name=#{0} and class_loc=#{1}
+</select>
+<!-- 15.共有多少教室与上面的方法配套使用 --> 
+<select id="Classroomnumberwithtop" resultType="int">
+select count(*) from classroom where class_name=#{0} and class_loc=#{1}
+</select>
+<!-- 16.查询可以分配的时间和教室 --> 
+<select id="searchhave" resultType="cla">
+select cc_time2 from classroom cr,clacur cc where cr.classid=cc.Classid and cr.class_name=#{1} and cc.cc_time1=#{2} and cr.class_loc=#{0}
+</select>
+<!-- 17.添加教室课程安排 --> 
+<insert id="insertclasscour">
+insert into clacur (ccid,Classid,uid,Coursename,ccteacher,cc_time1,cc_time2,cc_status,ccuse) values(default,#{0},#{1},#{2},#{3},#{4},#{5},#{6},#{7});
+</insert>
+<!-- 18.与上述方法搭配，查出教师名字 --> 
+<select id="selectname" resultType="String">
+select name from userlogin where uid=#{0}
+</select>
+<!-- 19.查出来教室的classid --> 
+<select id="selectlcassid" resultType="int">
+select classid from classroom where class_name=#{0} and class_loc=#{1}
+</select>
+<!-- 20.显示教室安排-所有的安排 --> 
+<select id="showarrange" resultType="cr">
+select ccid, class_loc,class_name,cc_time1,cc_time2,ccteacher,Coursename,cc_status from classroom,clacur WHERE clacur.classid=classroom.classid
+</select>
+<!-- 21.删除已安排的教室 -->
+<delete id="delectarranged" parameterType="Integer">
+    delete from clacur where ccid=#{0} 
+</delete>
+<!-- 22.根据教室地点，名字，时间等等多条件查询 -->  
+<select id="showbysomething" resultType="cr">
+select ccid, class_loc,class_name,cc_time1,cc_time2,ccteacher,Coursename,cc_status from classroom,clacur WHERE clacur.classid=classroom.classid and class_name=#{0} and class_loc=#{1} and cc_time1 &gt;#{2} and cc_time1 &lt; #{3} and cc_status=#{4}
+</select> 
+<!-- 23.添加教师信息 未使用--> 
+<insert id="insertinfoteacher">
+insert into userlogin (uid,username,password,name,uid_rol,uid_run) values(default,#{0},#{1},#{2},#{3},#{4})
+</insert>  
+<!-- 24.列出教师 -->  
+<select id="teacherinfo" resultType="user">
+select * from userlogin where uid_rol=#{0}
+</select> 
+<!-- 25.停用教师 -->  
+<update id="updateteainfo" parameterType="int"> 
+update userlogin set uid_run=#{0} where uid=#{1}
+</update> 
+<!-- 26.启用教师 -->  
+<update id="updateteainfo2" parameterType="int"> 
+update userlogin set uid_run=#{0} where uid=#{1}
+</update> 
+<!-- 27.删除教师信息 -->
+<delete id="deleteteacher" parameterType="Integer">
+    delete from userlogin where uid=#{0} 
+</delete>
+<!-- 28.插入教师信息 -->
+<insert id="insertteacher">
+insert into userlogin (uid,username,password,name,uid_rol,uid_run,uid_phone,uid_email,uid_time) values(default,#{0},#{1},#{2},#{3},#{4},#{5},#{6},#{7})
+</insert>  
+<!-- 29.显示未查看消息 -->  
+<select id="showmess" resultType="mess">
+select * from message where uid=#{0} and mess_status=#{1} 
+</select> 
+<!-- 30.显示已查看消息 -->  
+<select id="showmessed" resultType="mess">
+select * from message where uid=#{0} and mess_status=#{1} 
+</select> 
+<!-- 31.显示已查看消息 -->  
+<update id="updatemess" parameterType="int"> 
+update message set mess_status=#{0} where mesid=#{1}
+</update> 
 </mapper>

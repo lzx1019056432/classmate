@@ -33,69 +33,57 @@
 <article class="cl pd-20">
 	<form action="" method="post" class="form form-horizontal" id="form-admin-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>登录账号：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="adminName" name="adminName">
+				<input type="text" class="input-text" value="" placeholder="登录账号" id="username" name="username">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>初始密码：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>密码：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="password" name="password">
+				<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="password" name="password">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>昵称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="password2" name="password2">
+			<input type="text" class="input-text" value="" placeholder="昵称" id="name" name="name">
 			</div>
 		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>性别：</label>
-			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
-				<div class="radio-box">
-					<input name="sex" type="radio" id="sex-1" checked>
-					<label for="sex-1">男</label>
-				</div>
-				<div class="radio-box">
-					<input type="radio" id="sex-2" name="sex">
-					<label for="sex-2">女</label>
-				</div>
-			</div>
+
+				<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">角色：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+				<select class="select" name="uid_run" size="1" id="uid_run">
+					<option value="0">启用</option>
+					<option value="1">不启用</option>
+				</select>
+				</span> </div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
+				<input type="text" class="input-text" value="" placeholder="手机号" id="uid_phone" name="uid_phone">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" placeholder="@" name="email" id="email">
+				<input type="text" class="input-text" placeholder="@" name="uid_email" id="uid_email">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">角色：</label>
 			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-				<select class="select" name="adminRole" size="1">
-					<option value="0">超级管理员</option>
+				<select class="select" name="uid_rol" size="1" id="uid_rol">
+					<option value="0">管理员</option>
 					<option value="1">教师</option>
-					<option value="2">临时人员</option>
-					<option value="3">学生</option>
 				</select>
 				</span> </div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-3">备注：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)"></textarea>
-				<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
-			</div>
-		</div>
-		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+				<button class="btn btn-primary radius" type="button" id="submitt">&nbsp;&nbsp;提交&nbsp;&nbsp;</button>
 			</div>
 		</div>
 	</form>
@@ -161,6 +149,31 @@ $(function(){
 		}
 	});
 });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#submitt").click(function(){
+		//alert($("#selectroom option:selected").text());
+		//jquery 获得select的值，通过传值
+  	$.post("../insertteacher.do",
+	{username:$("#username").val(),
+  	 password:$("#password").val(),	
+  	 name:$("#name").val(),
+	 uid_rol:$("#uid_rol option:selected").val(),
+	 uid_run:$("#uid_run option:selected").val(),
+	 uid_phone:$("#uid_phone").val(),
+	 uid_email:$("#uid_email").val(),
+	 uid_time:$("#uid_time").val()
+	},
+	function(result){
+		 layer.msg('添加成功，点击右上角关闭按钮',{time:8000});//这里出现了些问题，已解决
+		   
+});   
+	}); 
+	
+});
+
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>

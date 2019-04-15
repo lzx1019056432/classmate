@@ -7,7 +7,7 @@ public class clacur {
 	private int Classid;
 	private int Courseid;
 	private String ccteacher;
-	private Date cc_time1;
+	private String cc_time1;
 	private int cc_time2;
 	private int cc_status;
 	private int ccuse;
@@ -35,10 +35,10 @@ public class clacur {
 	public void setCcteacher(String ccteacher) {
 		this.ccteacher = ccteacher;
 	}
-	public Date getCc_time1() {
+	public String getCc_time1() {
 		return cc_time1;
 	}
-	public void setCc_time1(Date cc_time1) {
+	public void setCc_time1(String cc_time1) {
 		this.cc_time1 = cc_time1;
 	}
 	public int getCc_time2() {

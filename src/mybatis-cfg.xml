@@ -14,10 +14,13 @@
  </settings> 
 	<typeAliases> 
 			<!-- 起别名，在daoxml文件中可以直接引用起好的别名 -->
- 
+<typeAlias type="com.xxx.entity.classroom" alias="cr"/>	
+<typeAlias type="com.xxx.entity.clacur" alias="cla"/> 
+<typeAlias type="com.xxx.entity.Message" alias="mess"/>
+<typeAlias type="com.xxx.entity.User" alias="user"/> 
 	</typeAliases>
 	<mappers> 
-  
+  <mapper resource="com/xxx/dao/UserDaoMapper.xml"/>	
 	</mappers>
 
 </configuration>  
