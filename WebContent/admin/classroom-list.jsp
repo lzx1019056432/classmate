@@ -1,8 +1,8 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!--_meta 作为公共模版分离出去-->
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <html>
 <head>
 <meta charset="utf-8">
@@ -209,9 +209,9 @@
 							</c:if>
 						</tr>
 						</c:forEach>
-					</tbody>
+					</tbody> 
 				</table>
-			</div>
+			</div> 
 		</article>
 	</div>
 </section>

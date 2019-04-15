@@ -1,7 +1,7 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!--_meta 作为公共模版分离出去-->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+			 pageEncoding="UTF-8"%>
+		<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>

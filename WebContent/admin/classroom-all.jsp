@@ -1,9 +1,9 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!--_meta 作为公共模版分离出去-->
+    <%@ page language="java" contentType="text/html; charset=UTF-8"
+			 pageEncoding="UTF-8"%>
+		<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
-<html>
+<html> 
 <head>
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -194,7 +194,7 @@
 </section>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="admin/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="admin/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="admin/static/h-ui/js/H-ui.js"></script>
 <script type="text/javascript" src="admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
